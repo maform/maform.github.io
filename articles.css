@@ -1,0 +1,46 @@
+html{scrollbar-width: thin;overflow-x: hidden;} /*The vertical scrollbar would lead to a horisontal scrollbar without hiding the overflow */
+body {font-family: 'Old Standard TT', serif;color:#555;font-size:20px;background-color: #f7f7f7;max-width:576px;margin-left:auto;margin-right:auto;padding:1em;}
+body>header,body>footer{text-align:center;} /*for the small Maform Technology title on the top and the copy right notice at the bottom*/
+footer{margin-top:3em;} /* some space above each footer*/
+a {color: #ed1c24;text-decoration-color: #ffcece;} a:hover {color: #e6595e;}
+article>footer {font-size:90%;} article>footer * {color:#999;letter-spacing:initial;}/*fonte-size here scales everything proportionally because "%" units are being used everyehere*/
+hr{border-top: 0.5px solid #ccc;border-bottom:0px;}
+
+@media (max-width: 540px) {body{font-size:18px;}} /*decrease sizes for smaller screens*/
+@media (min-width: 2880px) {body{font-size:40px;max-width:1152px;}} /*double things on huge screens like 4K tv-s if someone reads on those*/
+@media print {@page{size:auto;margin:0;} body{font-size:3mm; max-width:90mm;} figure{page-break-inside: avoid;} a{text-decoration:none; color:unset;} .navL, .navR {display: none;}} /*keep figures intact*/
+
+h1,h2,h3 {font-family: 'Playfair Display', serif;color:#343434;letter-spacing:-0.025em;text-align:left;}
+h1 {font-size:276%;text-align:center;}/*font-sizes are in "%" so everything can be scaled proportionally*/
+h2 {font-size:150%;margin-top:2em;}
+h3 {font-size:100%;color:#555;}
+p {text-align: justify; text-justify: inter-word;}
+div {padding-top:0 !important; padding-bottom:0 !important;}
+
+body>header>a,body>footer>a {color: unset;text-decoration: none;}
+.navL, .navR {color:#ccc;cursor: pointer;} .navL{float:left;} .navR{float:right;}
+
+.katex > .katex-html {white-space: normal;} /*enable long equations to be broken into several lines*/
+.katex .base {margin-top: 2px;margin-bottom: 2px;} /*give some whitespace to multi-line equations*/
+.katex{line-height:0;}/*preventing in-line equations to change line-height, works with really long ones, but they text-align won't be "justified"*/
+figure{width: 100vw; max-height:100vh;position:relative; left: 50%; right: 50%; margin-left: -50vw; margin-right: -50vw; border:none;}/*wide figures can reach the edges of the screen*/
+figure>*{display: block;margin-left: auto;margin-right: auto;margin-bottom:18px;max-width:100vw;max-height:calc(100vh - 2em);}/*we keep tall figures and their captions visible together*/
+figcaption{text-align:center;font-size:80%;color:#888;}/*we have to recenter the caprions*/
+.nocaption>*{max-height:100vh;}/*if there is no caption under the tall figure it can fill the vertical space*/
+.equation,.equation * {max-height:initial;}/*equations can be broken apart so there is no problem if they are really tall */
+.ddd,.ddd * {max-height:100vh;}/*this solves 3d content distorsion but captions wont fit*/
+canvas{width:unset !important; height:unset !important;} canvas:focus { outline: none; }
+
+sup{cursor: pointer;} sup:hover{color:#999;}
+
+.pop {display: block;position: fixed;background-color:#fff;padding: 16px;border-radius: 16px;box-shadow: 0px 0px 8px #ddd;}
+
+ul {list-style: none;margin-left: 0;padding-left: 0;} /*get rid of the ugly dot and condense its space*/
+ul>li {padding-left: 1em;text-indent: -0.5em;}/*restore hierarchial indenting*/
+ul>li:before {content: "-";padding-right: 5px;}/*create the marker "-" and fully align columns*/
+ol {margin-left:0.3em;}/*put first elements about to the left of container */
+ol>li {margin-left: -1em;}/*condense numbered lists*/
+
+table {border-collapse: collapse;width:max-content;padding:1em;} td, th {text-align: left;padding:5px;} tr {border-bottom: 0.5px solid #ccc;border-collapse: collapse;}tr:last-child {border-bottom: none;} /*tables*/
+
+::selection {background:#ed1c24;color:#fff;;} ::-moz-selection {background:#ed1c24;color:#fff;;}/*selections are Maform brand red*/
