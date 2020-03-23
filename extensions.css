@@ -17,4 +17,7 @@
     -webkit-transform: scale3D(1, 1, 1);transform: scale3D(1, 1, 1);} 35% {
     -webkit-transform: scale3D(0, 0, 1);transform: scale3D(0, 0, 1);}}
 
-/*cookie notice*/
+#cookie {display: flex; background: #eee; padding: 0px 10px 0px 16px; font-size: 0.7em; margin-bottom: 32px;} /*cookie notice*/
+#cookie * {color: #999;}
+#ok {margin-left: 10px;font-size: 2em;background: none;border: none;cursor: pointer;}
+button:focus{outline: none;}
