@@ -152,9 +152,11 @@ function eatcookie() {var cookie=document.getElementById("cookie"); cookie.paren
 
 function wantcookie() {eatcookie(); localStorage.setItem('cookie','ok');}
 
+function inIframe () {try{return window.self !== window.top;}catch(e){return true;}} // sense if in iframe
+		    
 window.addEventListener("load", loaded); // threejs seems to throw off body onload?
 
-function loaded() {if (localStorage.getItem('cookie') == 'ok') {eatcookie();}} 
+function loaded() {if (localStorage.getItem('cookie') == 'ok' || inIframe() ) {eatcookie();}} 
 </script>
 </body>
 </html>
