@@ -14,7 +14,7 @@ h1,h2,h3 {font-family: 'Playfair Display', serif;color:#343434;letter-spacing:-0
 h1 {font-size:276%;text-align:center;}/*font-sizes are in "%" so everything can be scaled proportionally*/
 h2 {font-size:150%;margin-top:2em;}
 h3 {font-size:100%;color:#555;}
-p {text-align: justify; text-justify: inter-word;}
+p {text-align: justify; text-justify: inter-word; hyphens: auto;}
 div {padding-top:0 !important; padding-bottom:0 !important;}
 
 body>header>a,body>footer>a {color: unset;text-decoration: none;}
